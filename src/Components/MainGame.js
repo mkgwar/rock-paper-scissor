@@ -6,7 +6,7 @@ const MainGame = () => {
   return (
     <div className="main-game h-full w-full flex justify-center items-center">
       <div className="flex flex-col items-center w-full gap-16">
-        <div className="flex justify-between items-center w-full">
+        <div className="flex justify-center items-center w-full gap-32">
           <Paper />
           <Scissors />
         </div>
