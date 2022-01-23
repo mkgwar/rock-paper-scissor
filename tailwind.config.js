@@ -4,24 +4,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // text color
-        "Pale-Violet": "hsl(276, 100%, 81%)",
-        "Moderate-Violet": "hsl(276, 55%, 52%)",
-        "Desaturated-Dark-Violet": "hsl(271, 15%, 43%)",
-        "Grayish-Blue": "hsl(206, 6%, 79%)",
-        "Very-Dark-Desaturated-Violet": "hsl(271, 36%, 24%)",
-        "Dark-Grayish-Violet": "hsl(270, 7%, 64%)",
+        //Rock, paper, scissors coin colors
+        "paper-shadow": "hsl(230, 89%, 62%)",
+        paper: "hsl(230, 89%, 65%)",
+        scissors: "hsl(39, 89%, 53%)",
+        "scissors-shadow": "hsl(40, 84%, 49%)",
+        rock: "hsl(349, 70%, 56%)",
+        "rock-shadow": "hsl(349, 71%, 52%)",
 
-        // gradient color
-        "Light-Magenta": "hsl(293, 100%, 63%)",
-        "Light-Violet": "hsl(264, 100%, 61%)",
+        //neutral
+        "Dark-Text": "hsl(229, 25%, 31%)",
+        "Score-Text": "hsl(229, 64%, 46%)",
+        "Header-Outline": "hsl(217, 16%, 45%)",
 
-        //secondary
-        "Light-Grayish-Violet": "hsl(270, 20%, 96%)",
-        "Very-Dark-Desaturated-Violet": "hsl(271, 36%, 24%)",
-        "Very-Light-Magenta": "hsl(289, 100%, 72%)",
+        //background
+        "background-from": "hsl(214, 47%, 23%)",
+        "background-to": "hsl(237, 49%, 15%)",
       },
     },
+    plugins: [],
   },
-  plugins: [],
 };
