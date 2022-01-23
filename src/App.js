@@ -1,14 +1,39 @@
 import "./App.css";
-import MainGame from "./Components/MainGame";
+import FirstScreen from "./Components/FirstScreen";
+import SecondScreen from "./Components/SecondScreen";
+import Rules from "./Components/Rules";
+import RulesButton from "./Components/RulesButton";
 import Score from "./Components/Score";
+import { useState } from "react";
+
+const FIRST_SCREEN = "FIRST_SCREEN";
+const SECOND_SCREEN = "SECOND_SCREEN";
 
 const App = () => {
+  const [showRules, setShowRules] = useState(false);
+  const [screenDisplay, setScreenDisplay] = useState(FIRST_SCREEN);
+  const [selectedCoin, setSelectedCoin] = useState();
+
+  const toggleRules = () => {
+    setShowRules(!showRules);
+  };
+
+  const selectedCoinFromUser = (userCoin) => {
+    setSelectedCoin(userCoin);
+    setScreenDisplay(SECOND_SCREEN);
+  };
+
   return (
-    <main className="background w-screen h-screen relative p-[3vh]">
-      <div className="h-full w-full relative">
-        <Score />
-        <MainGame />
-      </div>
+    <main className="background w-screen h-screen relative">
+      <Score />
+      {screenDisplay === FIRST_SCREEN && (
+        <FirstScreen selectedCoinFromUser={selectedCoinFromUser} />
+      )}
+      {screenDisplay === SECOND_SCREEN && (
+        <SecondScreen selectedCoin={selectedCoin} />
+      )}
+      {showRules && <Rules toggleRules={toggleRules} />}
+      <RulesButton toggleRules={toggleRules} />
     </main>
   );
 };

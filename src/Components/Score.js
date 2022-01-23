@@ -1,6 +1,6 @@
 const Score = () => {
   return (
-    <div className="flex justify-between items-center border-2 border-Header-Outline p-[2vh] absolute top-0 left-0 right-0 rounded-lg">
+    <div className="flex justify-between items-center border-2 border-Header-Outline p-[2vh] absolute top-[2vh] left-[2vh] right-[2vh] rounded-lg">
       <div className="text-white leading-[2.5vh] text-[2.5vh] font-black">
         ROCK
         <br />

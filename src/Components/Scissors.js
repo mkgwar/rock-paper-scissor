@@ -1,10 +1,12 @@
 import Coin from "./Coin";
 
-const Scissors = () => {
+const SCISSORS = "SCISSORS";
+
+const Scissors = ({ selectedCoinFromUser }) => {
   const STYLE = "bg-scissors border-scissors-shadow";
   const IMG_URL = "/images/icon-scissors.svg";
   return (
-    <div>
+    <div onClick={() => selectedCoinFromUser(SCISSORS)}>
       <Coin url={IMG_URL} coinStyle={STYLE} />
     </div>
   );
