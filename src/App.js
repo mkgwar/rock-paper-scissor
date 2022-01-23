@@ -4,7 +4,7 @@ import Score from "./Components/Score";
 
 const App = () => {
   return (
-    <main className="background w-screen h-screen relative p-8 overflow-hidden">
+    <main className="background w-screen h-screen relative p-[3vh] overflow-hidden">
       <div className="h-full w-full relative">
         <Score />
         <MainGame />

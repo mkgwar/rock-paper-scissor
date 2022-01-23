@@ -13,7 +13,7 @@ const MainGame = () => {
         <Rock />
       </div>
 
-      <div className="absolute bottom-0 text-[2vh] text-white border-2 border-white rounded-lg p-8 py-2 mb-8 cursor-pointer">
+      <div className="absolute bottom-0 text-[2vh] text-white border-2 border-white rounded-lg p-[3vh] py-[1vh] mb-[3vh] cursor-pointer">
         RULES
       </div>
     </div>
