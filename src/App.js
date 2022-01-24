@@ -13,6 +13,7 @@ const App = () => {
   const [showRules, setShowRules] = useState(false);
   const [screenDisplay, setScreenDisplay] = useState(FIRST_SCREEN);
   const [selectedCoin, setSelectedCoin] = useState();
+  const [score, setScore] = useState(0);
 
   const toggleRules = () => {
     setShowRules(!showRules);
@@ -25,12 +26,17 @@ const App = () => {
 
   return (
     <main className="background w-screen h-screen relative">
-      <Score />
+      <Score score={score} />
       {screenDisplay === FIRST_SCREEN && (
         <FirstScreen selectedCoinFromUser={selectedCoinFromUser} />
       )}
       {screenDisplay === SECOND_SCREEN && (
-        <SecondScreen selectedCoin={selectedCoin} />
+        <SecondScreen
+          selectedCoin={selectedCoin}
+          score={score}
+          setScore={setScore}
+          setScreenDisplay={setScreenDisplay}
+        />
       )}
       {showRules && <Rules toggleRules={toggleRules} />}
       <RulesButton toggleRules={toggleRules} />
