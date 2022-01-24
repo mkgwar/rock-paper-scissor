@@ -7,7 +7,7 @@ const Coin = ({ url, coinStyle }) => {
       }
     >
       <div className="bg-white w-full h-full flex justify-center items-center border-t-8 border-gray-200 rounded-full">
-        <img src={url} alt="paper" />
+        <img src={url} alt="paper" className="pointer-events-none" />
       </div>
     </div>
   );
